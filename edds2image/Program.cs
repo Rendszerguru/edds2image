@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -142,8 +142,11 @@ namespace edds2image
 						case Pfim.ImageFormat.Rgb24:
 							format = PixelFormat.Format24bppRgb;
 							break;
+						case Pfim.ImageFormat.Rgb8:
+							format = PixelFormat.Format8bppIndexed;
+							break;
 						default:
-							throw new NotImplementedException($"Nem támogatott képformátum: {image.Format}");
+							throw new NotImplementedException($"Unsupported image format: {image.Format}");
 					}
 
 					var handle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
