@@ -1,11 +1,34 @@
 # edds2image
-edds2image is an application for converting .edds files into PNG, TIFF, and DDS image formats.
+
+**edds2image** is a high-performance tool for converting `.edds` files (Enfusion Engine / Arma Reforger) into standard **PNG**, **TIFF**, and **DDS** formats.
+
+## Key Features
+- **Batch Processing:** Automatically converts all files in a folder using multi-threading.
+- **Flexible Input:** Supports Drag & Drop, File Association, and Manual Selection.
+- **High Performance:** Uses all available CPU cores and in-memory buffering for maximum speed.
+- **Portable:** Single executable file, no installation required.
 
 ## Usage
-1. Place your `.edds` files in the same directory as the application.
-2. Run the application. It will convert all found `.edds` files into the specified formats.
-3. The output files will be saved in folders named `png`, `tif`, and `dds`.
-4. When assigned to a edds file, pressing Enter or double-clicking will unpack both the specified edds file and all other edds files within the same directory
+
+### 1. Batch Mode (Default)
+Place `edds2image.exe` in the folder with your `.edds` files and run it. It will process everything in that directory.
+
+### 2. Drag and Drop
+Drag one or multiple `.edds` files and drop them directly onto `edds2image.exe`.
+
+### 3. File Association
+Right-click an `.edds` file -> *Open with* -> *Choose another app* -> Select `edds2image.exe`. 
+Once associated, double-clicking any `.edds` file (or pressing Enter) will automatically trigger the conversion for that file and all others in its directory.
+
+### 4. Manual Selection
+If you run the app in an empty folder, it will automatically open a **Windows File Dialog**. Select any `.edds` file, and the app will process its entire folder.
+
+## Output
+Converted files are neatly organized into subfolders:
+- `/png`
+- `/tif`
+- `/dds`
 
 ## Requirements
-- .NET Framework 4.6.2 or later
+- Windows 10 / 11 (64-bit)
+- .NET 8.0 Desktop Runtime
